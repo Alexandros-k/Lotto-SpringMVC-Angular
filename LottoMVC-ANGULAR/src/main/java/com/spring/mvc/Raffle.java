@@ -11,11 +11,10 @@ public class Raffle {
 	
 
 
-	public void startRegularLottary(int numberOfWinningNumbers) {
+	public List<LottoBall> startRegularLottary(int numberOfWinningNumbers) {
 		List<LottoBall> winningNumbers = getWinningNumbers(numberOfWinningNumbers);
-		Display display = new Display();
-		display.printLottoBallList(winningNumbers);
-	}
+		return winningNumbers;
+			}
 	
 	public void startJokerLottary(int numberOfWinningNumbers) {
 		List<LottoBall> winningNumbers = getWinningNumbers(numberOfWinningNumbers);
