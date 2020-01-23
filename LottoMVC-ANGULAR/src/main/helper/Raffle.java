@@ -6,14 +6,9 @@ public class Raffle {
 	public Raffle(List<LottoBall> listOfLottoBalls) {
 		this.listOfLottoBalls = listOfLottoBalls;
 	}
-	
-
 
 	public List<LottoBall> startRegularLottary(int numberOfWinningNumbers) {
-		List<LottoBall> winningNumbers = getWinningNumbers(numberOfWinningNumbers);
-		/*
-		 * Display display = new Display(); display.printLottoBallList(winningNumbers);
-		 */
+		List<LottoBall> winningNumbers = getWinningNumbers(numberOfWinningNumbers);		
 		return winningNumbers;
 	}
 	
@@ -51,21 +46,4 @@ public class Raffle {
 	private void insertRandomLottoBallToWinningNumbers(LottoBall randomLottoBall, List<LottoBall> winningNumbers) {
 		winningNumbers.add(randomLottoBall);
 	}
-
-	/*
-	 * public static void main(String[] args) { List<LottoBall> listOfLottoBalls =
-	 * new ArrayList<LottoBall>(); LottoGuy lottoGuy = new LottoGuy();
-	 * List<LottoBall> lottoBalls = lottoGuy.populateListWithBalls(listOfLottoBalls,
-	 * 45); Raffle raffle = new Raffle(lottoBalls); raffle.startRegularLottary(5);
-	 * 
-	 * 
-	 * List<LottoBall> listOfjokerBalls = new ArrayList<LottoBall>();
-	 * 
-	 * List<LottoBall> jokerBalls =
-	 * lottoGuy.populateListWithBalls(listOfjokerBalls,20); Raffle jokerRaffle = new
-	 * Raffle(jokerBalls); jokerRaffle.startJokerLottary(1);
-	 * 
-	 * 
-	 * }
-	 */
 }
