@@ -1,3 +1,4 @@
+package com.spring.mvc;
 import java.util.List;
 
 public class LottoGuy {
