@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-danger text-center">Welcome to {{ title }}!</h1>
+    <hr />
+
+    <div id="fetchbtn">
+      <button type="button" class="btn btn-outline-success" (click)="getAllWinningNumbers();">Click me</button>
+    </div>
+    <div><small class="text-info">Click the button to fetch winning numberse!</small></div>
+
+    <div *ngIf="myresponse">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <th>lotto numbers</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let LottoBall of myresponse">
+            <td>{{LottoBall.ballNumber}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
